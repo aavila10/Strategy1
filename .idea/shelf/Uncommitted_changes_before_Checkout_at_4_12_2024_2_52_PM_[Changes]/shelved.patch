@@ -1,0 +1,20 @@
+Index: src/main/java/Monster.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.util.HashMap;\r\n\r\npublic abstract class Monster {\r\n    private Integer hp;\r\n    private Integer xp;\r\n    private Integer maxHP;\r\n    private HashMap<String, Integer> items;\r\n\r\n\r\n    public Monster(Integer maxHp, Integer xp, HashMap<String, Integer> items) {\r\n        this.maxHP = maxHp;\r\n        hp = this.maxHP;\r\n        this.xp = xp;\r\n        this.items = items;\r\n    }\r\n\r\n    @Override\r\n    public String toString() {\r\n        return \"hp=\" + hp +\r\n                \", xp=\" + xp +\r\n                \", maxHP=\" + maxHP +\r\n                \", items=\" + items;\r\n    }\r\n\r\n    @Override\r\n    public boolean equals(Object o) {\r\n        if (this == o) return true;\r\n        if (o == null || getClass() != o.getClass()) return false;\r\n\r\n        Monster monster = (Monster) o;\r\n\r\n        if (getHp() != null ? !getHp().equals(monster.getHp()) : monster.getHp() != null) return false;\r\n        if (getXp() != null ? !getXp().equals(monster.getXp()) : monster.getXp() != null) return false;\r\n        if (getMaxHP() != null ? !getMaxHP().equals(monster.getMaxHP()) : monster.getMaxHP() != null) return false;\r\n        return getItems() != null ? getItems().equals(monster.getItems()) : monster.getItems() == null;\r\n    }\r\n\r\n    @Override\r\n    public int hashCode() {\r\n        int result = getHp() != null ? getHp().hashCode() : 0;\r\n        result = 31 * result + (getXp() != null ? getXp().hashCode() : 0);\r\n        result = 31 * result + (getMaxHP() != null ? getMaxHP().hashCode() : 0);\r\n        result = 31 * result + (getItems() != null ? getItems().hashCode() : 0);\r\n        return result;\r\n    }\r\n\r\n    public Integer getHp() {\r\n        return hp;\r\n    }\r\n\r\n    public void setHp(Integer hp) {\r\n        this.hp = hp;\r\n    }\r\n\r\n    public Integer getXp() {\r\n        return xp;\r\n    }\r\n\r\n    public void setXp(Integer xp) {\r\n        this.xp = xp;\r\n    }\r\n\r\n    public Integer getMaxHP() {\r\n        return maxHP;\r\n    }\r\n\r\n    public void setMaxHP(Integer maxHP) {\r\n        this.maxHP = maxHP;\r\n    }\r\n\r\n    public HashMap<String, Integer> getItems() {\r\n        return items;\r\n    }\r\n\r\n    public void setItems(HashMap<String, Integer> items) {\r\n        this.items = items;\r\n    }\r\n}\r\n
+===================================================================
+diff --git a/src/main/java/Monster.java b/src/main/java/Monster.java
+--- a/src/main/java/Monster.java	
++++ b/src/main/java/Monster.java	
+@@ -16,10 +16,7 @@
+ 
+     @Override
+     public String toString() {
+-        return "hp=" + hp +
+-                ", xp=" + xp +
+-                ", maxHP=" + maxHP +
+-                ", items=" + items;
++        return "hp=" + hp + "/" + maxHP;
+     }
+ 
+     @Override
