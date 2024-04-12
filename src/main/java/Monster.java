@@ -19,8 +19,7 @@ public abstract class Monster {
         return "hp=" + hp +
                 ", xp=" + xp +
                 ", maxHP=" + maxHP +
-                ", items=" + items +
-                '}';
+                ", items=" + items;
     }
 
     @Override
