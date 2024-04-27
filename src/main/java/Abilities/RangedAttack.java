@@ -1,6 +1,8 @@
-public class MeleeAttack implements Attack{
+package Abilities;
+import Monsters.*;
+public class RangedAttack implements Attack {
     Monster attacker;
-    public MeleeAttack(Monster attacker){
+    public RangedAttack(Monster attacker){
         this.attacker = attacker;
     }
 
@@ -10,6 +12,6 @@ public class MeleeAttack implements Attack{
     public Integer attack(Monster target){
         String message = attacker + " uses a melee attack on " + target;
         System.out.println(message);
-        return null;
+        return attacker.getAgi() - target.getDef();
     }
 }

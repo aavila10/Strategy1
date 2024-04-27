@@ -1,10 +1,36 @@
+package Monsters;
+
+import Abilities.*;
+
 import java.util.HashMap;
+import java.util.Random;
 
 public abstract class Monster {
     private Integer hp;
     private Integer xp;
+
+    Integer agi = 10;
+
+    Integer str = 10;
+
+    Integer def = 10;
+
+    Attack attack;
+
+    public Integer getAgi() {
+        return agi;
+    }
+
+    public Integer getStr() {
+        return str;
+    }
+
+    public Integer getDef() {
+        return def;
+    }
+
     private Integer maxHP;
-    private HashMap<String, Integer> items;
+    private HashMap<String, Integer> items = new HashMap<>();
 
 
     public Monster(Integer maxHp, Integer xp, HashMap<String, Integer> items) {
@@ -16,10 +42,7 @@ public abstract class Monster {
 
     @Override
     public String toString() {
-        return "hp=" + hp +
-                ", xp=" + xp +
-                ", maxHP=" + maxHP +
-                ", items=" + items;
+        return "hp=" + hp + "/" + maxHP;
     }
 
     @Override
@@ -43,6 +66,40 @@ public abstract class Monster {
         result = 31 * result + (getItems() != null ? getItems().hashCode() : 0);
         return result;
     }
+
+
+    boolean takeDamage(Integer dam){
+        if(dam > 0) {
+            this.setHp(this.getHp() - dam);
+            System.out.println("The creature was hit for " + dam + " damage");
+
+
+            if (this.getHp() <= 0) {
+                System.out.println("Oh no! the creature has perished");
+                System.out.println(toString());
+                return false;
+            }
+
+        }
+        return true;
+    }
+
+
+    public Integer attackTarget(Monster target){
+        int damage = attack.attack(target);
+        return damage;
+    }
+
+    Integer getAttribute(Integer min, Integer max){
+        Random rand = new Random();
+        if(min > max){
+            Integer temp = min;
+            min = max;
+            max = temp;
+        }
+        return rand.nextInt(max-min) + min;
+    }
+
 
     public Integer getHp() {
         return hp;

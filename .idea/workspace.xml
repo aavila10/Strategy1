@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d13c656-7530-4cca-8d4c-a230599eefb4" name="Changes" comment="Merged Strategy Part one into main branch" />
+    <list default="true" id="6d13c656-7530-4cca-8d4c-a230599eefb4" name="Changes" comment="Finished all methods including extending and implementing classes.">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_19_2024_1_19_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_19_2024_1_19_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,7 +21,6 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -26,7 +28,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="StrategyPart1" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -70,11 +72,6 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\CST338 HW\Strategy1\src\main\java" />
-    </key>
-  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -91,7 +88,6 @@
       <option name="presentableId" value="Default" />
       <updated>1712957162851</updated>
       <workItem from="1712957163923" duration="1026000" />
-      <workItem from="1713553684088" duration="3608000" />
     </task>
     <task id="LOCAL-00001" summary="Making Strategy repo">
       <option name="closed" value="true" />
@@ -109,15 +105,7 @@
       <option name="project" value="LOCAL" />
       <updated>1712957853250</updated>
     </task>
-    <task id="LOCAL-00003" summary="Merged Strategy Part one into main branch">
-      <option name="closed" value="true" />
-      <created>1712958949489</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1712958949489</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,19 +116,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="main" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -149,7 +125,6 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Making Strategy repo" />
     <MESSAGE value="Made Monster, Imp, and, Kobold classes." />
-    <MESSAGE value="Merged Strategy Part one into main branch" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merged Strategy Part one into main branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made Monster, Imp, and, Kobold classes." />
   </component>
 </project>
